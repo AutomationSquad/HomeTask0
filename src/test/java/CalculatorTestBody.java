@@ -6,34 +6,22 @@ import static org.junit.Assert.*;
 
 public class CalculatorTestBody {
 
-    private CalculatorTest calculatorTest;
-
-    @Before
-    public void initTest() {
-        calculatorTest = new CalculatorTest();
-    }
-
-    @After
-    public void afterTest() {
-        calculatorTest = null;
-    }
-
     @Test
     public void testGetSum() {
-        assertEquals(15,calculatorTest.getSum(10,5));
+        assertEquals(15,CalculatorTest.getSum(10,5));
     }
 
     @Test
     public void testGetDivide() {
-        assertEquals(3,calculatorTest.getDivide((byte)15,(byte)5));
+        assertEquals(3,CalculatorTest.getDivide((byte)15,(byte)5));
     }
 
     @Test
     public void testGetMultiple(){
-        assertEquals(50,calculatorTest.getMultiple(5,10));
+        assertEquals(50,CalculatorTest.getMultiple(5,10));
     }
     @Test
     public void divisionWithException() {
-        calculatorTest.getDivide((byte) 15,(byte)0);
+        CalculatorTest.getDivide((byte) 15,(byte)0);
     }
 }
