@@ -1,59 +1,56 @@
+
 import org.junit.Assert;
 import org.junit.Test;
 
-import static com.sun.org.apache.xerces.internal.util.PropertyState.is;
-import static org.hamcrest.core.IsInstanceOf.instanceOf;
-import static org.hamcrest.core.StringContains.containsString;
-import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.assertNotEquals;
-import static org.junit.Assert.assertThat;
+
 
 public class CalculatorTest {
 
     @Test
-    public void AdditionTest() {
-        assertEquals(4, Calculator.addition(2, 2));
-        assertEquals(0, Calculator.addition(0, 0));
-        assertEquals(-4, Calculator.addition(-2, -2));
-        assertNotEquals(3, Calculator.addition(2, 2));
+    public void additionTest() {
+        Assert.assertEquals(4, Calculator.addition(2, 2), 0);
+        Assert.assertEquals(4, Calculator.addition(2, 2.5), 0.5);
+        Assert.assertEquals(0, Calculator.addition(0, 0), 0);
+        Assert.assertEquals(-4, Calculator.addition(-2, -2), 0);
+        Assert.assertNotEquals(3, Calculator.addition(2, 2), 0);
     }
 
     @Test
-    public void SubstractionTest() {
-        assertEquals(0, Calculator.substraction(2, 2));
+    public void substractionTest() {
+        Assert.assertEquals(0, Calculator.substraction(2, 2), 0);
     }
 
     @Test
-    public void MultiplicationTest() {
-        assertEquals(4, Calculator.multiplication(2, 2));
+    public void multiplicationTest() {
+        Assert.assertEquals(4, Calculator.multiplication(2, 2), 0);
     }
 
     @Test
-    public void DivisionTest() {
-        assertEquals(1, Calculator.division(2, 2));
-        assertEquals(0, Calculator.division(0, 2));
-        assertNotEquals(0, Calculator.division(2, 2));
+    public void divisionTest() {
+        Assert.assertEquals(1, Calculator.division(2, 2), 0);
+        Assert.assertEquals(0, Calculator.division(0, 2), 0);
+        Assert.assertNotEquals(0, Calculator.division(2, 2), 0);
     }
 
     @Test(expected = ArithmeticException.class)
-    public void DivisionOnZeroTest() {
+    public void divisionOnZeroTest() {
         Calculator.division(2, 0);
     }
 
     @Test
-    public void ReminderTest(){
-        assertEquals(1, Calculator.reminder(10,3));
-        assertNotEquals(3, Calculator.reminder(10,3));
+    public void reminderTest(){
+        Assert.assertEquals(1, Calculator.reminder(10,3), 0);
+        Assert.assertNotEquals(3, Calculator.reminder(10,3), 0);
     }
 
     @Test
-    public void IncrementByOneTest(){
-        assertEquals(3, Calculator.incrementByOne(2));
+    public void incrementByOneTest(){
+        Assert.assertEquals(3, Calculator.incrementByOne(2), 0);
     }
 
     @Test
-    public void DecrementByOneTest(){
-        assertEquals(1, Calculator.decrementByOne(2));
+    public void decrementByOneTest(){
+        Assert.assertEquals(1, Calculator.decrementByOne(2), 0);
     }
 
 

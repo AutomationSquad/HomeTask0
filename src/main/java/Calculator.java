@@ -1,18 +1,18 @@
 public class Calculator {
 
-    public static int addition(int number1, int number2){
+    public static double addition(double number1, double number2){
         return number1 + number2;
     }
 
-    public static int substraction(int number1, int number2){
+    public static double substraction(double number1, double number2){
         return number1 - number2;
     }
 
-    public static int multiplication(int number1, int number2){
+    public static double multiplication(double number1, double number2){
         return number1 * number2;
     }
 
-    public static int division(int number1, int number2){
+    public static double division(double number1, double number2){
         if (number2 == 0) {
             throw new ArithmeticException("Operation is not supported. Cannot divide by zero.");
         }
@@ -21,18 +21,16 @@ public class Calculator {
         }
     }
 
-    public static int reminder(int number1, int number2){
+    public static double reminder(double number1, double number2){
         return number1 % number2;
     }
 
-    public static int incrementByOne(int number1){
-        number1 ++;
-        return number1;
+    public static double incrementByOne(double number1){
+        return ++number1;
     }
 
-    public static int decrementByOne(int number1){
-        number1 --;
-        return number1;
+    public static double decrementByOne(double number1){
+        return --number1;
     }
 
 }
