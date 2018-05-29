@@ -11,91 +11,91 @@ public class CalculatorTest {
 
     /*----------------------SUM-------------------------*/
     @Test
-    public void sumInt() { Assert.assertEquals("Results are not equal",24, Calculator.sum(numInt1,numInt2)); }
+    public void sumInt() { Assert.assertEquals("The result of the sum of the integer numbers isn't correct.",24, Calculator.sum(numInt1,numInt2)); }
 
     @Test
-    public void sumDoub() { Assert.assertEquals("Results are not equal", 10, Calculator.sum(numDoub1,numDoub2), 0);}
+    public void sumDoub() { Assert.assertEquals("The result of the sum of the double numbers isn't correct.", 10, Calculator.sum(numDoub1,numDoub2), 0);}
 
     @Test
-    public void sumDoubInt() { Assert.assertEquals("Results are not equal", 21.5, Calculator.sum(numDoub1,numInt1), 0);}
+    public void sumDoubInt() { Assert.assertEquals("The result of the sum of the integer&double numbers isn't correct.", 21.5, Calculator.sum(numDoub1,numInt1), 0);}
+
 
     /*-------------------SUBTRACTION------------------*/
     @Test
-    public void subtrDoub() { Assert.assertEquals("Results are not equal",1, Calculator.substraction(numDoub1, numDoub2), 0); }
+    public void subtrDoub() { Assert.assertEquals("The result of the subtraction of the double numbers isn't correct.",1, Calculator.substraction(numDoub1, numDoub2), 0); }
 
     @Test
-    public void subtrInt() { Assert.assertEquals("Results are not equal",8, Calculator.substraction(numInt1, numInt2)); }
+    public void subtrInt() { Assert.assertEquals("The result of the subtraction of the integer numbers isn't correct.",8, Calculator.substraction(numInt1, numInt2)); }
 
     @Test
-    public void subtrDoubInt() { Assert.assertEquals("Results are not equal",-2.5, Calculator.substraction(numDoub1, numInt2), 0); }
+    public void subtrDoubInt() { Assert.assertEquals("The result of the subtraction of the integer&double numbers isn't correct.",-2.5, Calculator.substraction(numDoub1, numInt2), 0); }
 
 
     /*--------------------MULTIPLICATION----------------*/
     @Test
-    public void multiplInt() { Assert.assertEquals("Results are not equal",128, Calculator.multiplication(numInt1, numInt2)); }
+    public void multiplInt() { Assert.assertEquals("The result of the multiplication of the integer numbers isn't correct.",128, Calculator.multiplication(numInt1, numInt2)); }
 
     @Test
-    public void multiplDoub() { Assert.assertEquals("Results are not equal",24.75, Calculator.multiplication(numDoub1, numDoub2),0); }
+    public void multiplDoub() { Assert.assertEquals("The result of the multiplication of the double numbers isn't correct.",24.75, Calculator.multiplication(numDoub1, numDoub2),0); }
 
     @Test
-    public void multiplDoubInt() { Assert.assertEquals("Results are not equal",44, Calculator.multiplication(numDoub1, numInt2),0); }
-
+    public void multiplDoubInt() { Assert.assertEquals("The result of the multiplication of the integer&double numbers isn't correct.",44, Calculator.multiplication(numDoub1, numInt2),0); }
 
 
     /*----------------------DIVISION--------------------*/
     @Test
-    public void divisInt() { Assert.assertEquals("Results are not equal",2, Calculator.division(numInt1, numInt2)); }
+    public void divisInt() { Assert.assertEquals("The result of the division of the integer numbers isn't correct.",2, Calculator.division(numInt1, numInt2)); }
 
     @Test
-    public void divisDoub() { Assert.assertEquals("Results are not equal",1.2, Calculator.division(numDoub1, numDoub2),0.2); }
+    public void divisDoub() { Assert.assertEquals("The result of the division of the double numbers isn't correct.",1.2, Calculator.division(numDoub1, numDoub2),0.2); }
 
     @Test
-    public void divisDoubInt() { Assert.assertEquals("Results are not equal",0.4, Calculator.division(numDoub1, numInt1),0.2); }
+    public void divisDoubInt() { Assert.assertEquals("The result of the division of the integer&double numbers isn't correct.",0.4, Calculator.division(numDoub1, numInt1),0.2); }
 
 
     /*----------------------------------------------------------NEGATIVE CASES----------------------------------------------------------------------*/
 
     /*----------------------SUM-------------------------*/
     @Test
-    public void sumIntNeg() { Assert.assertEquals("IT'S NEGATIVE CASE. IT SHOULD FALL.",5, Calculator.sum(numInt1,numInt2)); }
+    public void sumIntNeg() { Assert.assertEquals("IT'S NEGATIVE CASE FOR THE SUM OF THE INTEGER. IT SHOULD FALL.",5, Calculator.sum(numInt1,numInt2)); }
 
     @Test
-    public void sumDoubNeg() { Assert.assertEquals("IT'S NEGATIVE CASE. IT SHOULD FALL.", 8, Calculator.sum(numDoub1,numDoub2), 0);}
+    public void sumDoubNeg() { Assert.assertEquals("IT'S NEGATIVE CASE FOR THE SUM OF THE DOUBLE. IT SHOULD FALL.", 8, Calculator.sum(numDoub1,numDoub2), 0);}
 
     @Test
-    public void sumDoubIntNeg() { Assert.assertEquals("IT'S NEGATIVE CASE. IT SHOULD FALL.", 13.5, Calculator.sum(numDoub1,numInt1), 0);}
+    public void sumDoubIntNeg() { Assert.assertEquals("IT'S NEGATIVE CASE FOR THE SUM OF THE INTEGER&DOUBLE. IT SHOULD FALL.", 13.5, Calculator.sum(numDoub1,numInt1), 0);}
 
     /*-------------------SUBTRACTION------------------*/
     @Test
-    public void subtrDoubNeg() { Assert.assertEquals("IT'S NEGATIVE CASE. IT SHOULD FALL.",8, Calculator.substraction(numDoub1, numDoub2), 0); }
+    public void subtrDoubNeg() { Assert.assertEquals("IT'S NEGATIVE CASE FOR THE SUBTRACTION OF THE DOUBLE. IT SHOULD FALL.",8, Calculator.substraction(numDoub1, numDoub2), 0); }
 
     @Test
-    public void subtrIntNeg() { Assert.assertEquals("IT'S NEGATIVE CASE. IT SHOULD FALL.",10, Calculator.substraction(numInt1, numInt2)); }
+    public void subtrIntNeg() { Assert.assertEquals("IT'S NEGATIVE CASE FOR THE SUBTRACTION OF THE INTEGER. IT SHOULD FALL.",10, Calculator.substraction(numInt1, numInt2)); }
 
     @Test
-    public void subtrDoubIntNeg() { Assert.assertEquals("IT'S NEGATIVE CASE. IT SHOULD FALL.",12.5, Calculator.substraction(numDoub1, numInt2), 0); }
+    public void subtrDoubIntNeg() { Assert.assertEquals("IT'S NEGATIVE CASE FOR THE SUBTRACTION OF THE INTEGER&DOUBLE. IT SHOULD FALL.",12.5, Calculator.substraction(numDoub1, numInt2), 0); }
 
 
     /*--------------------MULTIPLICATION----------------*/
     @Test
-    public void multiplIntNeg() { Assert.assertEquals("IT'S NEGATIVE CASE. IT SHOULD FALL.",188, Calculator.multiplication(numInt1, numInt2)); }
+    public void multiplIntNeg() { Assert.assertEquals("IT'S NEGATIVE CASE FOR THE MULTIPLICATION OF THE INTEGER. IT SHOULD FALL.",188, Calculator.multiplication(numInt1, numInt2)); }
 
     @Test
-    public void multiplDoubNeg() { Assert.assertEquals("IT'S NEGATIVE CASE. IT SHOULD FALL.",12.15, Calculator.multiplication(numDoub1, numDoub2),0); }
+    public void multiplDoubNeg() { Assert.assertEquals("IT'S NEGATIVE CASE FOR THE MULTIPLICATION OF THE DOUBLE. IT SHOULD FALL.",12.15, Calculator.multiplication(numDoub1, numDoub2),0); }
 
     @Test
-    public void multiplDoubIntNeg() { Assert.assertEquals("IT'S NEGATIVE CASE. IT SHOULD FALL.",48, Calculator.multiplication(numDoub1, numInt2),0); }
+    public void multiplDoubIntNeg() { Assert.assertEquals("IT'S NEGATIVE CASE FOR THE MULTIPLICATION OF THE INTEGER&DOUBLE. IT SHOULD FALL.",48, Calculator.multiplication(numDoub1, numInt2),0); }
 
 
 
     /*----------------------DIVISION--------------------*/
     @Test
-    public void divisIntNeg() { Assert.assertEquals("IT'S NEGATIVE CASE. IT SHOULD FALL.",8, Calculator.division(numInt1, numInt2)); }
+    public void divisIntNeg() { Assert.assertEquals("IT'S NEGATIVE CASE FOR THE DIVISION OF THE INTEGER. IT SHOULD FALL.",8, Calculator.division(numInt1, numInt2)); }
 
     @Test
-    public void divisDoubNeg() { Assert.assertEquals("IT'S NEGATIVE CASE. IT SHOULD FALL.",8.4, Calculator.division(numDoub1, numDoub2),0.2); }
+    public void divisDoubNeg() { Assert.assertEquals("IT'S NEGATIVE CASE FOR THE DIVISION OF THE DOUBLE. IT SHOULD FALL.",8.4, Calculator.division(numDoub1, numDoub2),0.2); }
 
     @Test
-    public void divisDoubIntNeg() { Assert.assertEquals("IT'S NEGATIVE CASE. IT SHOULD FALL.",2.4, Calculator.division(numDoub1, numInt1),0.2); }
+    public void divisDoubIntNeg() { Assert.assertEquals("IT'S NEGATIVE CASE FOR THE DIVISION OF THE INTEGER&DOUBLE. IT SHOULD FALL.",2.4, Calculator.division(numDoub1, numInt1),0.2); }
 
 }
