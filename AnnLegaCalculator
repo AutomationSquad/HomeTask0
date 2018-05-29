@@ -1,0 +1,139 @@
+package HomeWork;
+
+import org.junit.Assert;
+import org.junit.Test;
+
+public class Calculator {
+
+
+    @Test //First test
+    public void SubtractionInt() {
+
+        int a = 1;
+        int b = 0;
+
+        int subtractionInt = a - b;
+
+        System.out.println("\n--------------------------------------------------------------");
+        System.out.println("\nFirst test: " + a + " - " + b + " is " + subtractionInt);
+
+        Assert.assertTrue("\nExpected:\t1\nActual:\t\t"+subtractionInt,subtractionInt==1);
+    }
+
+
+
+    @Test //Second test
+    public void MultiplicationInt() {
+
+        int a = 1;
+        int b = 0;
+
+        int multiplicationInt = a * b;
+
+        System.out.println("\n--------------------------------------------------------------");
+        System.out.println("\nSecond test: " + a + " * " + b + " is " + multiplicationInt);
+
+        Assert.assertTrue("\nExpected:\t0\nActual:\t\t"+multiplicationInt,multiplicationInt==0);
+    }
+
+
+
+    @Test//Third test (negative - should fail)
+    public void DivisionInt() {
+
+        int a = 1;
+        int b = 0;
+
+        System.out.println("\n--(negative test - should fail)------------------------------------------------------------");
+        System.out.println("\nThird test: " + a + " / " + b + " is ");
+        int divisionInt = a / b;
+
+
+        System.out.println("\nThird test: " + a + " / " + b + " is " + divisionInt);
+
+        Assert.assertTrue("\nExpected:\t1\nActual:\t\t"+divisionInt,divisionInt==1);
+    }
+
+
+
+    @Test //Forth test (negative test - should fail)
+    public void DivisionFloat() {
+
+        float a = 1.56f;
+        float b = 0.2589f;
+
+        float divisionfloat = a / b;
+
+        System.out.println("\n--(negative test - should fail)------------------------------------------------------------");
+        System.out.println("\nForth test: " + a + " / " + b + " is " + divisionfloat);
+
+        Assert.assertTrue("\nExpected:\t6.02549\nActual:\t\t"+divisionfloat,divisionfloat==6.02549);
+    }
+
+
+
+    @Test//Fifth test
+    public void SumInt() {
+
+        int a = 100;
+        int b = 0;
+
+        int sumInt = a + b;
+
+        System.out.println("\n--------------------------------------------------------------");
+        System.out.println("\nFifth test: " + a + " + " + b + " is " + sumInt);
+
+        Assert.assertTrue("\nExpected:\t100\nActual:\t\t"+sumInt,sumInt==100);
+    }
+
+
+
+    @Test//Sixth test
+    public void SumByte() {
+
+        byte a = -128;
+        byte b = 127;
+
+        int sumByte = a + b;
+
+        System.out.println("\n--------------------------------------------------------------");
+        System.out.println("\nSixth test: " + a + " + " + b + " is " + sumByte);
+
+        Assert.assertTrue("\nExpected:\t-1\nActual:\t\t"+sumByte,sumByte==-1);
+    }
+
+
+
+    @Test//Seventh test (negative test - should fail)
+    public void EqualsFloatByte() {
+
+        byte a = 8;
+        float b = 8f;
+
+        boolean equalsFloatByte = a == b;
+
+        System.out.println("\n--(negative test - should fail)------------------------------------------------------------");
+        System.out.println("\nSeventh test: " + a + " equals " + b + " is " + equalsFloatByte);
+
+        Assert.assertTrue("\nExpected:\tfalse\nActual:\t\t"+equalsFloatByte,equalsFloatByte==false);
+    }
+
+
+
+    @Test//Eights test
+    public void RemainderByte() {
+
+        byte a = 99;
+        byte b = 5;
+
+        int remainderByte = a % b;
+
+        System.out.println("\n--------------------------------------------------------------");
+        System.out.println("\nEights test: Remainder of division " + a + " on " + b + " is " + remainderByte);
+
+        Assert.assertTrue("\nExpected:\t4\nActual:\t\t"+remainderByte,remainderByte==4);
+    }
+
+    }
+
+
