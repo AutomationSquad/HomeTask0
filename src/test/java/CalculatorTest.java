@@ -8,75 +8,56 @@ public class CalculatorTest {
     @Test
     public void addition() {
         Calculator calc = new Calculator();
-        double actual = calc.addition();
-        assertEquals(4.6586, actual, 0);
+        double actual = calc.addition(2.3, 5.23);
+        assertEquals(7.53, actual, 0);
     }
 
     @Test
     public void deduction() {
         Calculator calc = new Calculator();
-        int actual = calc.deduction();
-        assertEquals(-5, actual, 0);
+        int actual = calc.deduction(2,-5);
+        assertEquals(7, actual, 0);
 
     }
 
     @Test
     public void multiplication() {
         Calculator calc = new Calculator();
-        double actual = calc.multiplication();
-        assertEquals(46.0000138, actual, 0);
+        double actual = calc.multiplication(2.34, 4);
+        assertEquals(9.36, actual, 0);
     }
 
     @Test
     public void division() {
         Calculator calc = new Calculator();
-        double actual = calc.division();
-        assertEquals(1.2, actual, 0);
+        double actual = calc.division(2.98, 2);
+        assertEquals(1.49, actual, 0);
     }
 
     @Test
     public void sqrt_() {
         Calculator calc = new Calculator();
-        double actual = calc.sqrt();
-        assertEquals(3, actual, 0);
+        double actual = calc.sqrt(4);
+        assertEquals(2, actual, 0);
     }
 
    //negative cases
 
+
     @Test
     public void addition_neg() {
         Calculator calc = new Calculator();
-        double actual = calc.addition();
-        assertEquals(3, actual, 0);
+        double actual = calc.addition(2.3, 5.23%3);
+        assertEquals(7.53, actual, 0);
     }
 
-    @Test
-    public void deduction_neg() {
-        Calculator calc = new Calculator();
-        int actual = calc.deduction();
-        assertEquals(-1, actual, 0);
-
-    }
 
     @Test
-    public void multiplication_neg() {
+    public void division_zero() {
         Calculator calc = new Calculator();
-        double actual = calc.multiplication();
-        assertEquals(2, actual, 0);
-    }
+        double actual = calc.division(2.98, 0);
+        assertEquals(1.49, actual, 0);
 
-    @Test
-    public void division_neg() {
-        Calculator calc = new Calculator();
-        double actual = calc.division();
-        assertEquals(0.5, actual, 0);
-    }
-
-    @Test
-    public void sqrt_neg() {
-        Calculator calc = new Calculator();
-        double actual = calc.sqrt();
-        assertEquals(1, actual, 0);
     }
 }
 
