@@ -1,5 +1,9 @@
-# Created by .ignore support plugin (hsz.mobi)
-/HomeTask0.iml
-/gradlew
-/gradlew.bat
-/.idea/
+out
+.idea
+.idea/workspace.xml
+.logs
+*.iml
+build
+.gradle
+gradle
+gradlew*
