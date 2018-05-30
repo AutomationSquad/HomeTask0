@@ -8,7 +8,7 @@ import static org.junit.Assert.assertNotEquals;
 public class CalculatorTest {
     private static Calculator calculator;
 
-    @Before
+    @BeforeClass
     public void setUp() {
         calculator = new Calculator();
     }
